@@ -131,3 +131,33 @@ h1 span:nth-child(8)
 		filter: blur(0);
 	}
 }
+
+.text{
+	position: absolute;
+	top: 110px;
+	left: 100px;
+	width: 600px;
+	height: 600px;
+	font-size: 36px;
+	text-shadow: 2px 2px 5px #f000;
+	overflow: hidden;
+}
+
+.text::before{
+	display: block;
+	position: absolute;
+	content: '01/01/2021';
+	animation: text-slide 1s 3s forwards;
+	top: -60px;
+	left: 0px;
+}
+
+@keyframes text-slide {
+	from{
+		top: -60px;
+	}
+
+	to{
+		top: 10px;
+	}
+}
